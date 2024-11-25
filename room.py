@@ -2,19 +2,19 @@
 
 class Room:
     """
-    La class des differentes Room (salles) qui sont dans le jeu
+    The class of the different rooms that are in the game, each room define by a name, a description and an exit.
 
-    Attributs: 
-        name (str) : Le nom de la piece
-        items (str) : Les objets de la piece
-        descritption (str) : La description de la piece
-        exits (dict) : Les differentes sorties de la piece
+    Attributes: 
+        name (str) : The room's name
+        items (str) : The objects that are in the room
+        descritption (str) : The room's description
+        exits (dict) : The different exits in the room.
 
     Methodes:
-        get_exit : voir si la direction demandee par le joueur existe ou non
-        get_exit_string : renvoyer la description des sorties
-        get_long_description : renvoyer une longue description de la sortie
-        __init__ : constructeur de la classe
+        get_exit : check if the direction wanted by the player is allowed (if the room's exit exist)
+        get_exit_string : return room's exit description
+        get_long_description : return a long description of the room's exit
+        __init__ : constructor of the class
     """
     # Define the constructor. 
     def __init__(self, name, description):
