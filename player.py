@@ -1,6 +1,16 @@
 # Define the Player class.
 class Player():
+    """
+    Cette classe represente le player (joueur) du jeu.
 
+    Attributs :
+    name (str) : Le nom choisi par le joueur
+    current_room : La piece ou se situe le joueur
+
+    Methode :
+        __init__ : Constructeur de la classe
+    
+    """
     # Define the constructor.
     def __init__(self, name):
         self.name = name
