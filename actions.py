@@ -137,3 +137,9 @@ class Actions:
             print("\t- " + str(command))
         print()
         return True
+
+
+    def vide(game, list_of_words, number_of_parameters) :
+        
+        print("")
+        return True
