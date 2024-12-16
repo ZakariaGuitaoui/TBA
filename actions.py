@@ -143,3 +143,40 @@ class Actions:
         
         print("")
         return True
+
+
+    def back(game, list_of_words, number_of_parameters):
+
+        player = game.player
+        l = len(list_of_words)
+
+    # Vérifier si le bon nombre de paramètres est fourni
+        if l != number_of_parameters + 1:  # +1 car la commande elle-même est comptée
+            command_word = list_of_words[0]
+            print(MSG0.format(command_word=command_word))  # Utilise MSG0 car aucun paramètre attendu
+            return False
+
+    # Appeler la méthode `moveback` du joueur pour revenir en arrière
+        success = player.moveback()
+
+        if not success:
+            print("Impossible de revenir en arrière.")
+            return False
+
+        return True
+
+
+    def history (game, list_of_words, number_of_parameters):
+        player = game.player
+        l = len(list_of_words)
+
+    # Vérifier si le bon nombre de paramètres est fourni
+        if l != number_of_parameters + 1:  # +1 car la commande elle-même est comptée
+            command_word = list_of_words[0]
+            print(MSG0.format(command_word=command_word))  # Utilise MSG0 car aucun paramètre attendu
+            return False
+
+        historique = player.get_history()
+        print(historique)
+        return True
+
